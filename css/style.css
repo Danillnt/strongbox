@@ -1,0 +1,297 @@
+@font-face {
+        font-family: TTLakes;
+        src: url(../fonts/TTLakes-Regular.ttf)
+}
+
+body {
+	font-family: TTLakes, sans-serif;
+
+}
+
+.container { /*Контейнер всей страницы*/
+	display: flex;
+	flex-direction: column;
+}
+
+/*-----------------------HEADER STYLE----------------------*/
+.a-nav { /*Контейнер для навигации*/
+	display: flex;
+	flex-basis: 100%;
+	height: 50px;
+	align-items: center;
+    flex-basis: 100%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.menu1 { /*Блок навигации №1*/
+    display: flex;
+    align-items: center;
+    flex-basis: 40%;
+    flex-grow: 0;
+}
+
+.menu2 { /*Блок навигации №2*/
+	display: flex;
+    flex-basis: 60%;
+    margin-right: 10px;
+    list-style-type: none;
+}
+.menu3 { /*Блок навигации №3*/
+	display: flex;
+    flex-basis: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+
+.button { /*Кнопки навигации*/
+	width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+    background-color: #FF3E79;
+}
+
+.menu1__button1 { /*Кнопка "гамбургер" */
+	margin-left: 16px;
+	margin-right: 16px; 
+	background-image: url("../image/menu1__button1.svg") ;
+	background-position: 9px 8px; 
+	background-repeat: no-repeat; 
+	background-size: 25px;
+}
+
+.menu1__divider, .menu2__divider2 { /*Разделитель*/
+	width: 2px;
+	height: 32px;
+	background-color: #EAEAEA;
+	border-radius: 1px;
+	margin-top: 28px;
+	margin-bottom: 28px;
+	border: 0px solid;
+	margin-left: 16px;
+}
+
+.menu1__logo { /*Логотип в шапке*/
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.menu2__button2 { /*Кнопка "Контакты"*/
+	margin-top: 24px;
+	margin-left: 200px;
+	margin-bottom: 24px;
+	margin-right: 16px; 
+	background-image: url("../image/menu2__button2.svg");
+	background-position: 10px 10px; 
+	background-repeat: no-repeat; 
+	background-size: 20px;
+}
+
+.menu2__button3 { /*Кнопка "Обратная связь"*/
+	margin-top: 24px;
+	margin-bottom: 24px;
+	margin-right: 16px; 
+	background-image: url("../image/menu2__button3.svg");
+	background-position: 11px 11px; 
+	background-repeat: no-repeat; 
+	background-size: 20px;
+}
+
+.menu2__button4 { /*Кнопка "Вход в личный кабинет"*/
+	margin-top: 24px;
+	margin-bottom: 24px;
+	margin-right: 20px; 
+	background-image: url("../image/menu2__button4.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.menu3__button5 { /*Кнопка "Заказ ремонта"*/
+	margin-top: 24px;
+	margin-bottom: 24px;
+	margin-left: 20px;
+	background-image: url("../image/menu3__button5.svg");
+    background-color: #FF3E79;
+    background-repeat: no-repeat;
+    background-position: center;	
+}
+
+.menu3__button6 { /*Кнопка "Статус ремонта"*/
+	margin-top: 24px;
+	margin-bottom: 24px;
+	margin-right: 24px;
+	margin-left: 16px; 
+	background-image: url("../image/menu3__button6.svg");
+    background-color: #FF3E79;
+    background-repeat: no-repeat;
+    background-position: center;	
+}
+
+
+/*------------------------MAIN STYLE-------------------------*/
+/*--------content №1--------*/
+.main {
+background: #F8F8F8;
+width: 100%;
+padding: 0px;
+margin: 0px;
+}
+
+.main-content1 { /*Флекс контейнер №1*/
+	display: flex;
+}
+
+.main-content1__element1 { /*элемент флекса №1*/
+	padding: 0px; 
+	flex-grow: 0;
+}
+
+.main-content1__title { /*элемент флекса №1*/
+	margin-left: 10px;
+	flex-grow: 2;
+}
+
+
+.main-content1__menu4 { /*Флекс контейнер №2 и элемент флекса №1*/
+	display: flex;
+	justify-content: flex-end;	
+}
+
+.label1 { /*Флекс контейнер №3 элемент флекса №2**/
+	display: flex;
+	align-items: center;
+}
+
+.label2 { /*Флекс контейнер №4 элемент флекса №2**/
+	display: flex;
+	align-items: center;
+	flex-grow: 2;
+	margin-left: 10px;
+}
+
+.main-content1__divider { /*Разделитель*/
+	border: 0px;
+	width: 3px;
+	height: 40px; 
+	margin-top: 20px;
+	border-radius: 2px;
+	background-color: #41F6D7;
+}
+
+
+/*--------content №2--------*/
+
+.b-nav {  /*Навигация scroll*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    overflow-x: auto;
+    margin-left: 0px;
+}
+
+li  {   /*Элементы навигация scroll*/
+	list-style-type: none;
+	margin-left: 16px;
+    padding: 8px 20px 8px 20px;
+    white-space: nowrap;
+}
+
+.b-nav__el1 { /*Стиль первого элемента навигации*/
+	border: 1px solid #41F6D7;
+	background-color: white;
+}
+
+.b-nav__a {   /*Убираем эфекты с ссылок*/
+    text-decoration: none;
+    color: #7E7E82;
+    line-height: 24px; 
+}
+
+/*--------content №3--------*/
+.article__paragraf{
+margin-left: 18px;
+}
+
+.main-content3 {
+	display: flex;
+}
+
+.main-content3__text {
+margin-left: 16px;
+}
+
+.main-content3__read-more { /*Блок кнопки и элемент флекса "content3"*/
+	margin-bottom: 20px; 
+	margin-top: 20px;
+	margin-left: 16px;
+}
+
+.read-more__button { /*Кнопка "Читать далее"*/
+    width: 140px;
+    height: 24px;
+    border: 0;
+    background-color: rgba(248,248,248, 1);
+    font-family: TTLakes,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.read-more__button::before { /*Иконка кнопки*/
+    content: "";
+    display: block;
+    background-image: url("../image/download.svg");
+    width: 8px;
+    height: 15px;
+    position: absolute;
+    top: 6px;
+    background-repeat: no-repeat;
+}
+
+
+/*--------------MEDIA QUERIES----------------*/
+
+@media only screen and (min-width: 800px)  { 
+	.a-nav {  /*Если экран больше 800 прячем "Контейнер для навигации"*/
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 800px) { /*Медиа запрос "Если экран меньше 800 прячем "Навигацию основного содержания"*/
+	.main-content1__menu4 {
+		display: none;
+	}
+	.article__paragraf { /*Прячем "Отзывы"*/
+		display: none;
+	}
+	.hide-1 { /*Прячем часть текста*/
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 700px) { 
+	.menu2 { /*Если экран меньше 700 прячем "Блок навигации №2"*/
+		display: none;
+	}
+
+	.menu1__divider { /*Прячем разделитель*/
+		display: none;
+	}
+
+	.main-content3 { /*Меняем флекс расположение главной оси*/
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.hide-2 { /*Прячем часть текста*/
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 555px) {
+    .main-logo__img  { /*Выравниваем границы изображения*/
+        width: 90%;
+    }
