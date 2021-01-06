@@ -1,0 +1,211 @@
+@font-face {
+        font-family: TTLakes;
+        src: url(../fonts/TTLakes-Regular.ttf)
+}
+
+body {
+    font-family: TTLakes, sans-serif;
+
+}
+
+.swipe-container {
+	width: 320px;
+    min-height: 100vh;
+    position: sticky; /*зафиксировали позицию блока*/
+    top: 0;
+    left: 0;
+	box-shadow:  30px -0px 5px 15px rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*---------------SWIPE-HEADERr-STYLE----------------------*/
+.swipe-nav-header {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.swipe-nav-header__close {
+    display: flex;
+    justify-content: center;
+    flex-basis: 25%;
+}
+
+.swipe-nav-header__logo {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 60%;
+}
+
+.swipe-nav-header__search {
+display: flex;
+justify-content: center;
+flex-basis: 25%;
+}
+
+.btn { /*Кнопки */
+	width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+    background-color: #FF3E79;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s;
+}
+
+.btn:hover { 
+    background-color: #f7caca; 
+}
+
+.swipe-nav-header__btn-thema_close {
+	background-image: url("../image/header-nav__btn-thema_close.svg");
+}
+
+.swipe-nav-header__btn-thema_search {
+    background-image: url("../image/header-nav__btn-thema_search.svg");    
+}
+
+ /*--------------------SWIPE-MAIN-STYLE---------------*/ 
+.swipe-main-list {
+    list-style: none;
+}
+
+@media only screen and (min-height: 804px)  { 
+    .swipe-main-list {  
+        position: fixed;
+        top: 10%;
+    }
+}
+
+.swipe-main-list__link  {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 32px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: 600;
+}
+
+.swipe-main-nav__divider {
+    position: absolute;
+    left: -1%;
+    right: 98%;
+    top: 14%;
+}
+
+@media only screen and (min-height: 800px)  { 
+    .swipe-main-nav__divider {  
+    position: fixed;
+    top: 12%;
+    }
+}
+.swipe-main-nav__divider-element {
+   transform: rotate(180deg); 
+    border: 0px;
+    width: 3px;
+    height: 32px; 
+    background-color: #41F6D7;
+}
+
+.swipe-main-list__item-thema_repair a {
+    color: #7E7E82;
+    padding-top: 20px;
+}
+
+
+/*-------------SWIPE-FOOTER-STYLE----------------------*/
+
+.swipe-nav-footer {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.swipe-nav-footer__call {
+    display: flex;
+    justify-content: center;
+     flex-basis: 33%;
+}
+
+.swipe-nav-footer__feedback { /*"Блок"*/
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 24%;
+}
+
+.swipe-nav-footer__entrance { /*"Блок"*/
+    display: flex;  
+    justify-content: flex-start;
+    flex-basis: 80%;
+}
+
+.swipe-nav-footer__btn-thema_call { /*"элемент"*/
+    background-image: url("../image/menu2__button2.svg");
+}
+
+.swipe-nav-footer__btn-thema_feedback { /*"элемент"*/
+    background-image: url("../image/menu2__button3.svg");
+}
+
+.swipe-nav-footer__btn-thema_entrance { /*"элемент"*/
+    background-image: url("../image/menu2__button4.svg");
+}
+
+.contact__email { /*"элемент"*/
+    padding-left: 22px;
+    padding-bottom: 16px;
+}
+
+.contact__phone-number { /*"элемент"*/
+    padding-left: 22px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+}
+
+.swipe-lang-list {
+    display: flex;
+    flex-basis: 100%;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.swipe-lang-list__link {
+    text-decoration: none;
+    color: black;
+}
+
+.swipe-lang-list__ru {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 22%;
+}
+
+.swipe-lang-list__en {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 15%;
+}
+
+.swipe-lang-list__ch {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 54%;
+}
+
+.swipe-lang-list__ru a {
+    color: #7E7E82;
+}
