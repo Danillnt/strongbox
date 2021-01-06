@@ -116,6 +116,11 @@ body {
     background-color: #FF3E79;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.3s;
+}
+
+.btn:hover { 
+    background-color: #f7caca;
 }
 
 .header-nav__btn-thema_menu { /*Кнопка "гамбургер" */
