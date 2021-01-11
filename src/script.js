@@ -1,5 +1,3 @@
-
-
 var popuplenovo = document.querySelector('.brend-types__desktop_wrapper-item-lenovo');
 var popupSamsung = document.querySelector('.brend-types__desktop_wrapper-item-samsung');
 var popupApple = document.querySelector('.brend-types__desktop_wrapper-apple');
@@ -40,7 +38,6 @@ if (window.matchMedia("(max-width: 1000px)").matches) {
 } else {
 
 };
-
 
 
 
