@@ -1,4 +1,3 @@
-
 const slider = document.querySelector('.slider-container');
 
 var mySwiper 
