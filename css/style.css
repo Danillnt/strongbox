@@ -1,375 +1,51 @@
-@font-face {
-        font-family: TTLakes;
-        src: url(../fonts/TTLakes-Regular.ttf)
+
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	margin: 0 15px;
+	background-color: tomato;
+	opacity: 1;
 }
 
-body {
-	font-family: TTLakes, sans-serif;
-
+.swiper-pagination-bullet-active {
+	background-color: navy;
 }
 
-.container { /*Контейнер всей страницы*/
-    position: relative;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-@media only screen and (min-width: 1120px) { /*ограничили по ширине контент*/
-    .container {
-        background-color: #F8F8F8;
-        max-width: 1120px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.swiper-button-prev,
+.swiper-button-next {
+	position: static;
+	margin-left: 10px;
 }
 
-/*-----------------------HEADER STYLE----------------------*/
-.header-nav { /*Контейнер для навигации*/
-	display: flex;
-	align-items: center;
-    flex-basis: 100%;
-    padding-bottom: 16px;
-    padding-top: 16px;
+.swiper-container {
+	padding-bottom: 50px;
 }
 
-@media only screen and (min-width: 800px)  { 
-	.header-nav {  /*Если экран больше 800 прячем "Контейнер для навигации"*/
-		display: none;
-	}
+.slider-container {
+	overflow: hidden;
+	width: 100%;
 }
 
-.header-nav__menu { /*Блок навигации №1*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 12%;
-/*    background-color: yellow;*/
-}
-
-@media only screen and (max-width: 500px) { 
-	.header-nav__menu {
-	flex-basis: 20%	
-	}
-}
-
-.header-nav__divider {
-	display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-basis: 3%;
-/*    background-color: blue;*/
-}
-
-@media only screen and (max-width: 500px) { 
-	.header-nav__divider {
-	display: none;
-	}
-}	
-
-.header-nav__logo {
-	display: flex;
-	justify-content: flex-start;
-    align-items: center;
-    flex-basis: 60%;
-/*    background-color: green;*/
-}
-
-@media only screen and (max-width: 500px) { 
-.header-nav__logo {
-	flex-basis: 35%;
-	}
-}
-
-.header-nav__tablet-list { /*Блок навигации №2*/
-	display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    flex-basis: 34%;
-}
-
-@media only screen and (max-width: 700px) { 
-	.header-nav__tablet-list { /*Если экран меньше 700 прячем "Блок навигации №2"*/
-		display: none;
-	}
-}
-
-.header-nav__mobile-list { /*Блок навигации №3*/
-	display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    flex-basis: 25%
-}
-
-@media only screen and (max-width: 500px) {
-	.header-nav__mobile-list {
-	flex-basis: 45%	
-	}	
-}
-
-.btn { /*Кнопки */
-	width: 40px;
-    height: 40px;
-    border: 0;
-    border-radius: 50%;
-    outline: none;
-    background-color: #FF3E79;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.3s;
-}
-
-.btn:hover { 
-    background-color: #f7caca;
-}
-
-.header-nav__btn-thema_menu { /*Кнопка "гамбургер" */
-	background-image: url("../image/menu1__button1.svg") ;
-}
-
-.header-nav__divider-element { /*Разделитель*/
-	width: 2px;
-	height: 32px;
-	background-color: #EAEAEA;
-	border-radius: 1px;
-	border: 0px solid;
-}
-
-@media only screen and (max-width: 700px) { 
-	.header-nav__divider_left { /*Прячем разделитель*/
-		display: none;
-	}
-}
-
-.header-nav__btn-thema_call { /*Кнопка "Контакты"*/
-	background-image: url("../image/menu2__button2.svg");
-}
-
-.header-nav__btn-thema_feedback { /*Кнопка "Обратная связь"*/
-
-	background-image: url("../image/menu2__button3.svg");
-}
-
-.header-nav__btn-thema_entrance { /*Кнопка "Вход в личный кабинет"*/
-	background-image: url("../image/menu2__button4.svg");
-}
-
-.header-nav__btn-thema_repair{ /*Кнопка "Заказ ремонта"*/
-	background-image: url("../image/menu3__button5.svg");
-}
-
-.header-nav__btn-thema_repair-status { /*Кнопка "Статус ремонта"*/
-	background-image: url("../image/menu3__button6.svg");
-}
-
-
-/*------------------------MAIN STYLE-------------------------*/
-/*--------content №1--------*/
-.main {
-background: #F8F8F8;
-width: 100%;
-padding: 0px;
-margin: 0px;
-}
-
-.main-nav {
-	display: flex;
-}
-
-.main-nav__divider {
-	display: flex;
-	flex-basis: 2%;
-	justify-content: flex-start;
-	align-items: center;
-}
-@media only screen and (max-width: 800px) {
-	.main-nav__divider {
-	flex-basis: 5%;	
-	}
-}
-
-.main-nav__title {
-	flex-basis: 61%;
-	align-items: center;
-}
-
-
-@media only screen and (max-width: 800px) {
-	.main-nav__title {
-		flex-basis: 95%; 
-	}
-}
-
-.main-nav__desktop-list-application {
-	display: flex;
-	flex-basis: 17%;
-	align-items: center;
+.slider-container .swiper-wrapper {
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 800px) {
-	.main-nav__desktop-list-application {
-		display: none;
+.card {
+	width: 20%;
+	margin-right: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+@media (max-width: 600px) {
+	.card {
+		width: 100%;
+		margin: 0;
+		flex-shrink: 0;
 	}
-}
 
-.main-nav__desktop-list-status {
-	display: flex;
-	flex-basis: 20%;
-	align-items: center;
-	justify-content: space-around;
-}
-
-@media only screen and (max-width: 800px) {
-	.main-nav__desktop-list-status {
-		display: none;
+	.slider-container .swiper-wrapper {
+		justify-content: initial;
+		flex-wrap: nowrap;
 	}
-}
-
-
-.main-nav__divider-element{ /*Разделитель*/
-	border: 0px;
-	width: 3px;
-	height: 40px; 
-	/*margin-top: 20px;*/
-	border-radius: 2px;
-	background-color: #41F6D7;
-}
-
-
-/*--------content №2--------*/
-
-.main-list {  /*Навигация scroll*/
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    overflow-x: auto;
-    margin-left: 0px;
-}
-
-.main-item  {   /*Элементы навигация scroll*/
-	list-style-type: none;
-	margin-left: 16px;
-    padding: 8px 20px 8px 20px;
-    white-space: nowrap;
-}
-
-.main-list__item-thema_repair { /*Стиль первого элемента навигации*/
-	border: 1px solid #41F6D7;
-	background-color: white;
-}
-
-.main-list__link {   /*Убираем эффекты с ссылок*/
-    text-decoration: none;
-    color: #7E7E82;
-    line-height: 24px; 
-}
-
-/*--------content №3--------*/
-.article__paragraf{
-margin-left: 18px;
-}
-
-@media only screen and (max-width: 800px) { /*Медиа запрос "Если экран меньше 800 прячем "Навигацию основного содержания"*/
-	.article__paragraf { /*Прячем "Отзывы"*/
-		display: none;
-	}
-}
-
-.article-content {
-	display: flex;
-}
-
-.article-content__collum-text {
-flex-basis: 50%
-}
-
-.article-content__collum-image {
-flex-basis: 50%
-}
-
-@media only screen and (max-width: 700px) { 
-	.article-content { /*Меняем флекс расположение главной оси*/
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
-}
-
-.article-content__collum-text-description {
-margin-left: 16px;
-margin-right: 16px;
-padding-bottom: 0px;
-font-size: 14px;
-line-height: 18px; 
-letter-spacing: 0.2px;
-}
-
-@media only screen and (max-width: 700px) { 
-.br {  /*Если экран меньше 800 убираем перенос*/
-	display: none;
-	}	
-}
-
-
-@media only screen and (max-width: 800px) { 
-	.article-content__collum-text-description_tablet-hide { /*Прячем часть текста*/
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 700px) { 
-	.article-content__collum-text-description_mobile-hide { /*Прячем часть текста*/
-		display: none;
-	}
-}
-
-.article-content__btn { /*Блок кнопки и элемент флекса "content3"*/
-	margin-bottom: 20px; 
-	margin-top: 20px;
-	margin-left: 16px;
-}
-
-.article-content__btn-thema_read { /*Кнопка "Читать далее"*/
-    width: 140px;
-    height: 24px;
-    border: 0;
-    background-color: rgba(248,248,248, 1);
-    font-family: TTLakes,sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-}
-
-.article-content__btn-thema_read::before { /*Иконка кнопки*/
-    content: "";
-    display: block;
-    background-image: url("../image/download.svg");
-    width: 8px;
-    height: 15px;
-    position: absolute;
-    top: 6px;
-    background-repeat: no-repeat;
-}
-
-.article-content__collum-image__logo {
-    padding: 20px 20px 20px 0;
-    max-height: 384px;
-    max-width: 532px;
-}
-
-@media only screen and (max-width: 700px) { /*если экран меньше 700 убираем отступ сверху*/
-    .article-content__collum-image__logo {
-        padding-top: 0px;
-        padding-right: 0px;
-    }
-}
-
-.article-content__collum-image__logo_big { 
-    width: 100%; 
-}
-
-@media only screen and (min-width: 768px) { /*добавляем закругления углов*/
-    .article-content__collum-image__logo_big {
-        border-radius: 5px;
-    }
 }
